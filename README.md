@@ -11,7 +11,8 @@ This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.es
 * The idea of the simple package
 First, the package created in this tutorial was built to be simple, easily understood, and useful. It solves a common problem in Mixed Models and Genomic Selection: high memmory (RAM) consumption when making `tcrossprod(x)` in a given narrow matrix (*i.e* when the number of columns is much bigger than the number of rows). This type of multiplication can easily freezes the machice. The solution is to split the multiplication in a loop. Therefore, using less memmory and demanding more time.
 
-* Formulas
+* Formulas:
+
 ![](https://raw.githubusercontent.com/rramadeu/R_Package_Workshop/master/CodeCogsEqn.gif)
 
 * Algorithm:
