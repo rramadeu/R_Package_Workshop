@@ -2,7 +2,6 @@
 ## rramadeu at gmail dot com
 
 ## Splits the tcrossprod for narrow matrix product
-
 Ntcrossprod <- function(x){
 
   ## Splitting the data
@@ -17,8 +16,9 @@ Ntcrossprod <- function(x){
     }else{
         y <- y + tcrossprod(x[,(intervals[i]):c(intervals[i+1]-1)])
     }
-    y <- y + tcrossprod(x[,ncol(x)])   
+   
   }
-
-  return(y)
+    y <- y + tcrossprod(x[,ncol(x)])
+    return(y)
 }
+
