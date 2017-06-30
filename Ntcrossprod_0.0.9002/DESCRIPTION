@@ -1,0 +1,23 @@
+Package: Ntcrossprod
+Title: tcrossprod for narrow matrix
+Version: 0.0.9002
+Date: June 2017
+Author@R: c(
+              person("Rodrigo", "Amadeu", email = "rodrigo.amadeu@usp.br", role = c("aut", "cre")),
+              person("Rodrigo", "Rampazo", email = "rramadeu@gmail.com", role = c("ctb")
+              )
+Maintainer: Rodrigo Amadeu <rodrigo.amadeu@usp.br>
+Description: This package makes tcrossprod for narrow matrix, e.g. matrices where the number of rows is much smaller than the number of columns.
+Depends:
+    R (>= 3.4.0)
+Imports:
+    corrplot (>= 0.77)
+Suggests: knitr,
+    rmarkdown
+License: GPL-3
+URL: https://github.com/rramadeu/Ntcrossprod
+BugReports: https://github.com/rramadeu/wiki
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+VignetteBuilder: knitr

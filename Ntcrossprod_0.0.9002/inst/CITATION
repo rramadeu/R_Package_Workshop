@@ -1,0 +1,15 @@
+citHeader("To cite Ntcrossprod in publications use:")
+citEntry(entry = "Article",
+  title        = "Ntcrossprod: an awesome tcrossprod for Narrow matrix",
+  author       = personList(as.person("Rodrigo Amadeu")),
+  journal      = "Journal of Journals",
+  year         = "2017",
+  volume       = "1",
+  number       = "1",
+  pages        = "1--2",
+
+  textVersion  =
+  paste("Rodrigo Amadeu (2017).",
+        "Ntcrossprod: an awesome tcrossprod for Narrow matrix.",
+        "Journal of Journals, 1(1), 1-2.")
+)
