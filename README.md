@@ -8,18 +8,18 @@ Licence: GPL-3
 
 This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.esalq.usp.br ) R Package workshop. The main idea of this Workshop was present the whys of creating a package. 
 
-* The idea of the simple package
+# The idea of the simple package `Ntcrossprod`
 First, the package created in this tutorial was built to be simple, easily understood, and useful. It solves a common problem in Mixed Models and Genomic Selection: high memmory (RAM) consumption when making `tcrossprod(x)` in a given narrow matrix (*i.e* when the number of columns is much bigger than the number of rows). This type of multiplication can easily freezes the machice. The solution is to split the multiplication in a loop. Therefore, using less memmory and demanding more time.
 
-   * Formulas:
+## Formulas:
 
 ![](https://raw.githubusercontent.com/rramadeu/R_Package_Workshop/master/CodeCogsEqn.gif)
 
-   * Algorithm:
+## Algorithm
 When `x` is a matrix with `ncol(x)` much bigger than `ncol(x)`, *e.g.* `dim(x) = c(1000,100000)`. The idea is of the function is: i) splits `x` in the columns direction, ii) computes the `tcrossprod()` for each one of its parts, iii) summation of all of parts. For more information look at the [`Ntcrossprod.R`](https://github.com/rramadeu/R_Package_Workshop/blob/master/Ntcrossprod_0.0.9002/R/Ntcrossprod.R). 
  Fell free to use it and ask about it.
  
-   * Installing the packages from github (for example, for *final* version 0.0.9002:
+## Installing the packages from github (for example, for *final* version 0.0.9002:
  
 ```{r, chache=FALSE}
 library(devtools)
@@ -30,7 +30,7 @@ library(Ntcrossprod)
 
 It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
 
-## References
+# References
 Hardcore:
   https://cran.r-project.org/doc/manuals/r-release/R-exts.html
   
@@ -40,7 +40,7 @@ Easy going:
 Enough:
   http://r-pkgs.had.co.nz/
   
-## Package idea
+# Package idea
 * `script.R`
 * `source("script.R")`
 * generic `function()`
@@ -57,7 +57,7 @@ Ntcrossprod(matrix(sample(c(1,0),10000,replace=TRUE),nrow=10,ncol=1000))
 
 * +1 function | code | data > PACKAGE!
 
-## My 1st Package! (Version 0.0.9000)
+# My 1st Package! (Version 0.0.9000)
 * What is a package?
 * Minimal package
 * Why RStudio?!
@@ -71,7 +71,7 @@ Ntcrossprod(matrix(sample(c(1,0),10000,replace=TRUE),nrow=10,ncol=1000))
     * Solution: Split in summation of several smaller crossprods of size nrow x 1,000.
 
 
-## Version 0.9001
+# Version 0.9001
 * Good practices in programming
     * https://google.github.io/styleguide/Rguide.xml
 
@@ -93,7 +93,7 @@ Ntcrossprod(matrix(sample(c(1,0),10000,replace=TRUE),nrow=10,ncol=1000))
     * It Should be small, if not, has to be justified. ONLY RDATA!
     * Other types in inst/extdata (later)
 
-## Version 0.9002
+# Version 0.9002
 * Enhancing functions
     * Open Ntcrossprod.R
 
@@ -114,7 +114,7 @@ Ntcrossprod(matrix(sample(c(1,0),10000,replace=TRUE),nrow=10,ncol=1000))
 
 * Vignettes
 
-## MISC
+# MISC
 * inst/CITATION
 * Compiled code: src/
 * Installed files: inst/
@@ -128,19 +128,20 @@ system(paste0("bash ",system.file(package = "Ntcrossprod"), "/shell_script/hello
 ```
 
 
-## onemap example
+# onemap example
 * www.github.com/augusto-garcia/onemap
 * NAMESPACE
 * DESCRIPTION
 
-## CRAN
+# CRAN
 * Self-contained
     * Changing global options, objetcs, etc
 * Check 0 errors | 0 warning  | 0 notes in all OSs
 * It does not messed globalenv up -> precise NAMESPACE
 * Stable
 
-## Your personal code is slow? Checklist
+# Appendix 
+## Checklist: Is your personal code slow? 
 * Can you use another machine? Why not?
 * Find the problem using native benchmark (`htop?`)
 * Is it a memory problem? If personal code:
