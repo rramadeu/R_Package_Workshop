@@ -12,13 +12,13 @@ This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.es
 First, the package created in this tutorial was built to be simple, easily understood, and useful. It solves a common problem in Mixed Models and Genomic Selection: high memmory (RAM) consumption when making `tcrossprod(x)` in a given narrow matrix (*i.e* when the number of columns is much bigger than the number of rows). This type of multiplication can easily freezes the machice. The solution is to split the multiplication in a loop. Therefore, using less memmory and demanding more time.
 
 * Formulas
-\[a+b = m \]
+$a+b = m$
 
-\[m >>> n \]
+$m >>> n$
 
-\[\boldsymbol{X}^{ }_{n,m} = \left [ \boldsymbol{A}^{ }_{n,a} \vdots \boldsymbol{B}^{ }_{n,b}  \right ] \]
+$\boldsymbol{X}^{ }_{n,m} = \left [ \boldsymbol{A}^{ }_{n,a} \vdots \boldsymbol{B}^{ }_{n,b}  \right ]$
 
-\[ \boldsymbol{X}^{ }_{n,m}\boldsymbol{X}^\prime_{m,n} = \boldsymbol{A}^{ }_{a,m}\boldsymbol{A}^\prime_{m,a} + \boldsymbol{B}^{ }_{n,b}\boldsymbol{X}^\prime_{b,n} \]
+$ \boldsymbol{X}^{ }_{n,m}\boldsymbol{X}^\prime_{m,n} = \boldsymbol{A}^{ }_{a,m}\boldsymbol{A}^\prime_{m,a} + \boldsymbol{B}^{ }_{n,b}\boldsymbol{X}^\prime_{b,n} $
 
 
 \boldsymbol{X}^{ }_{n,m}\boldsymbol{X}^\prime_{m,n} = \boldsymbol{A}^{ }_{a,m}\boldsymbol{A}^\prime_{m,a} + \boldsymbol{B}^{ }_{n,b}\boldsymbol{X}^\prime_{b,n}
