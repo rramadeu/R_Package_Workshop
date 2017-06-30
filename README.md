@@ -3,7 +3,11 @@ title: "R Package Workshop"
 author: "Rodrigo Amadeu"
 date: "June 27th 2017"
 ---
-This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://www.statgen.esalq.usp.br ) R Package workshop. Fell free to use it and ask about it.
+
+Licence: GPL-3
+
+This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.esalq.usp.br ) R Package workshop. The main idea of this Workshop was present the whys of creating a package. The package created in this tutorial is simple and solves a common problem in Mixed Models and Genomic Selection the high memmory (RAM) consumption when making `tcrossprod(x)` when `x` is a matrix with `ncol(x)` much bigger than `ncol(x)`, *e.g.* `dim(x) = c(1000,100000)`. The idea is of the function is: i) splits `x` in the columns direction, ii) computes the `tcrossprod()` for each one of its parts, iii) summation of all of parts. For more information look at the [`Ntcrossprod.R`](https://github.com/rramadeu/R_Package_Workshop/blob/master/Ntcrossprod_0.0.9002/R/Ntcrossprod.R). 
+ Fell free to use it and ask about it.
 
 
 It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
