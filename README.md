@@ -20,10 +20,13 @@ When `x` is a matrix with `ncol(x)` much bigger than `ncol(x)`, *e.g.* `dim(x) =
  Fell free to use it and ask about it.
  
    * Installing the packages from github (for example, for *final* version 0.0.9002:
- `library(devtools)`
- `install_github("rramadeu/R_Package_Workshop/Ntcrossprod_0.0.9002")`
- `library(Ntcrossprod)`
- `?Ntcrossprod`
+ 
+```{r, chache=FALSE}
+library(devtools)
+install_github("rramadeu/R_Package_Workshop/Ntcrossprod_0.0.9002")
+library(Ntcrossprod)
+?Ntcrossprod
+```
 
 It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
 
