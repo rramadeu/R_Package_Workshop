@@ -1,3 +1,6 @@
+## Created by Rodrigo Rampazo Amadeu
+## rramadeu at gmail dot com
+
 ## Splits the tcrossprod for narrow matrix product
 
 Ntcrossprod <- function(x){
