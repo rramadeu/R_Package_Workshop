@@ -11,14 +11,19 @@ This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.es
 * The idea of the simple package
 First, the package created in this tutorial was built to be simple, easily understood, and useful. It solves a common problem in Mixed Models and Genomic Selection: high memmory (RAM) consumption when making `tcrossprod(x)` in a given narrow matrix (*i.e* when the number of columns is much bigger than the number of rows). This type of multiplication can easily freezes the machice. The solution is to split the multiplication in a loop. Therefore, using less memmory and demanding more time.
 
-* Formulas:
+   * Formulas:
 
 ![](https://raw.githubusercontent.com/rramadeu/R_Package_Workshop/master/CodeCogsEqn.gif)
 
-* Algorithm:
+   * Algorithm:
 When `x` is a matrix with `ncol(x)` much bigger than `ncol(x)`, *e.g.* `dim(x) = c(1000,100000)`. The idea is of the function is: i) splits `x` in the columns direction, ii) computes the `tcrossprod()` for each one of its parts, iii) summation of all of parts. For more information look at the [`Ntcrossprod.R`](https://github.com/rramadeu/R_Package_Workshop/blob/master/Ntcrossprod_0.0.9002/R/Ntcrossprod.R). 
  Fell free to use it and ask about it.
-
+ 
+   * Installing the packages from github (for example, for *final* version 0.0.9002:
+ `library(devtools)`
+ `install_github("rramadeu/R_Package_Workshop/Ntcrossprod_0.0.9002")`
+ `library(Ntcrossprod)`
+ `?Ntcrossprod`
 
 It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
 
