@@ -3,8 +3,10 @@ title: "R Package Workshop"
 author: "Rodrigo Amadeu"
 date: "June 27th 2017"
 ---
+This is the ouline for the an internal [Statgen Lab/ESALQ/USP](www.statgen.esalq.usp.br ) R Package workshop. Fell free to use it and ask about it.
 
-This is the ouline for the R Package workshop based on the [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
+
+It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
 
 ## References
 Hardcore:
@@ -37,8 +39,6 @@ Ntcrossprod(matrix(sample(c(1,0),10000,replace=TRUE),nrow=10,ncol=1000))
 * What is a package?
 * Minimal package
 * Why RStudio?!
-
-http://hadley.nz/
 
 * METADATA DESCRIPTION
 * Build
@@ -100,7 +100,7 @@ http://hadley.nz/
 * inst/java
 * inst/stan
 
-```{r}
+```{r, chache=FALSE}
 system.file(package = "Ntcrossprod")
 system(paste0("bash ",system.file(package = "Ntcrossprod"), "/shell_script/hello.sh"))
 ```
