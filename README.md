@@ -3,7 +3,7 @@ title: "R Package Workshop"
 author: "Rodrigo Amadeu"
 date: "June 27th 2017"
 ---
-This is the ouline for the an internal [Statgen Lab/ESALQ/USP](www.statgen.esalq.usp.br ) R Package workshop. Fell free to use it and ask about it.
+This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://www.statgen.esalq.usp.br ) R Package workshop. Fell free to use it and ask about it.
 
 
 It is based on [References](references) and it uses R projects with R packages as supplementary material: `ntcrossprod_0.0.9000.Rproj`, `ntcrossprod_0.0.9001.Rproj`, `ntcrossprod_0.0.9002.Rproj`, `onemap.Rproj`
