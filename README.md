@@ -1,5 +1,5 @@
 ---
-title: "R Packages"
+title: "R Package Workshop"
 author: "Rodrigo Amadeu"
 date: "June 27th 2017"
 ---
