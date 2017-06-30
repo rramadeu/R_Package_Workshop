@@ -10,10 +10,12 @@ Ntcrossprod <- function(x){
   ## Core loop
   for(i in 1:( length(intervals)-1 ) ){
     if(i==1){
-      y <- tcrossprod( x[ , intervals[i]:intervals[i+1] ] )
+      y <- tcrossprod(x[,intervals[i]:c(intervals[i+1]-1)])
     }else{
-      y <- y + tcrossprod( x[ , intervals[i]:intervals[i+1] ] )
+        y <- y + tcrossprod(x[,(intervals[i]):c(intervals[i+1]-1)])
     }
+    y <- y + tcrossprod(x[,ncol(x)])   
   }
+
   return(y)
 }
