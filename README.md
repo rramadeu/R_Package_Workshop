@@ -6,7 +6,7 @@ date: "June 27th 2017"
 
 Licence: GPL-3
 
-This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.esalq.usp.br ) R Package workshop. The main idea of this Workshop was present the whys of creating a package. 
+This is the ouline for the an internal [Statgen Lab/ESALQ/USP](http://statgen.esalq.usp.br ) R Package workshop. The main idea of this Workshop was present the whys of creating a package. Any questions and suggestions, fell free to drop me a email: rramadeu at gmail dot com
 
 # The idea of the simple package `Ntcrossprod`
 First, the package created in this tutorial was built to be simple, easily understood, and useful. It solves a common problem in Mixed Models and Genomic Selection: high memmory (RAM) consumption when making `tcrossprod(x)` in a given narrow matrix (*i.e* when the number of columns is much bigger than the number of rows). This type of multiplication can easily freezes the machice. The solution is to split the multiplication in a loop. Therefore, using less memmory and demanding more time.
