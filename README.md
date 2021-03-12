@@ -16,7 +16,7 @@ First, the package created in this tutorial was built to be simple, easily under
 ![](https://raw.githubusercontent.com/rramadeu/R_Package_Workshop/master/CodeCogsEqn.gif)
 
 ## Algorithm
-When `x` is a matrix with `ncol(x)` much bigger than `ncol(x)`, *e.g.* `dim(x) = c(1000,100000)`. The idea is of the function is: i) splits `x` in the columns direction, ii) computes the `tcrossprod()` for each one of its parts, iii) summation of all of parts. For more information look at the [`Ntcrossprod.R`](https://github.com/rramadeu/R_Package_Workshop/blob/master/Ntcrossprod_0.0.9002/R/Ntcrossprod.R). 
+When `x` is a matrix with `ncol(x) >>> ncol(x)`, *e.g.* `dim(x) = c(1000,100000)`. The idea is of the function is: i) splits `x` in the columns direction, ii) computes the `tcrossprod()` for each one of its parts, iii) summation of all of parts. For more information look at the [`Ntcrossprod.R`](https://github.com/rramadeu/R_Package_Workshop/blob/master/Ntcrossprod_0.0.9002/R/Ntcrossprod.R). 
  Fell free to use it and ask about it.
  
 ## Installing the packages from github (for example, for *final* version 0.0.9002:
